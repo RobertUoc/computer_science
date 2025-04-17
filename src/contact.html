@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
+    <title>Jornades - Science Conference</title>
+  </head>
+  <body>
+    <include src="./views/header.html"></include>
+    <div class="container mt-5">
+        <div class="speaker">
+            <h1>Formulario de Contacto</h1>
+        </div>            
+        <div>
+            Si lo prefieres, también puedes contactar con nosotros directamente rellenando este formulario:            
+        </div>          
+              
+        <form class="p-4 border rounded">
+            
+            <div class="form-group">
+                <label for="nombre" class="form-label">Nombre: <span>*</span></label>
+                <input type="text" class="form-control" id="nombre" name="nombre" required>
+                <div class="invalid-feedback">Este campo es obligatorio.</div>
+            </div>                                
+
+            <div class="form-group">
+                <label for="correo" class="form-label">Correo electrónico: <span>*</span></label>
+                <input type="email" class="form-control" id="correo" name="correo" required>
+                <div class="invalid-feedback">Por favor, escriba un correo válido.</div>
+            </div>
+
+            <div class="form-group">
+                <label for="telefono" class="form-label">Teléfono de contacto:</label>
+                <input type="text" class="form-control" id="telefono" name="telefono">
+            </div>
+
+            <div class="form-group">
+                <label for="direccion" class="form-label">Dirección:</label>
+                <input type="text" class="form-control" id="direccion" name="direccion">
+            </div>
+
+            <div class="form-group">
+                <label for="tema" class="form-label">Tema a hablar:</label>
+                <select class="form-select" id="tema" name="tema">
+                    <option value="consulta">Consulta</option>
+                    <option value="soporte">Soporte técnico</option>
+                    <option value="otro">Otro</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="mensaje" class="form-label">Mensaje:</label>
+                <textarea class="form-control" id="mensaje" name="mensaje" rows="4"></textarea>
+            </div>
+
+            <h3 class="mt-4">Política de privacidad y RGPD <span>*</span></h3>
+
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="aceptoPolitica" required>
+                <label class="form-check-label" for="aceptoPolitica">
+                    Acepto que este sitio web almacene la información que he enviado para que puedan responder a mi solicitud, de acuerdo con la 
+                    <a href="https://" class="text-success fw-bold" target="_blank"> política de privacidad</a>.
+                </label>
+            </div>
+        
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="aceptoComercial">
+                <label class="form-check-label" for="aceptoComercial">
+                    Acepto recibir comunicaciones comerciales personalizadas por parte de Computer Science Conference 2025 de acuerdo con lo que establece nuestra
+                    <a href="https://" class="text-success fw-bold" target="_blank"> política de privacidad</a>.
+                </label>
+            </div>
+
+            <button type="submit" class="btn btn-primary mt-2">Enviar</button>
+        </form>
+
+    </div>
+
+    <include src="./views/footer.html"></include>
+    <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+
+  </body>
+</html>

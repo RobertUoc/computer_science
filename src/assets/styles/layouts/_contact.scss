@@ -1,0 +1,19 @@
+
+.invalid-feedback {
+    display: none;    
+}
+
+input:user-invalid + .invalid-feedback {
+    display: block;
+    color: $error-color;    
+}
+
+form:has(input[type="checkbox"]:not(:checked)) button[type="submit"] {
+    pointer-events: none; 
+    opacity: 0.5; 
+    background-color: gray; 
+}
+
+span {
+    color: $error_color;
+}

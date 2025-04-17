@@ -1,0 +1,50 @@
+.speaker {
+    text-align: center;
+    padding: 30px;    
+}
+
+.speaker h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    font-family: "Playfair Display", serif; /* Tipografía elegante */
+    color: color(display-p3 1 0 0);
+}
+
+
+.participants-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 40px;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* Ajuste de tamaño para organizar 3 columnas por fila */
+.participant-card {
+    background-color: color(display-p3 0.9 0.9 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: calc(33.333% - 20px); /* 3 columnas con espacio entre ellas */
+}
+
+.participant-card img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+/* Responsividad: en móviles cambia a una sola columna */
+@media (max-width: 768px) {
+    .participants-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .participant-card {
+        width: 80%;
+    }
+}

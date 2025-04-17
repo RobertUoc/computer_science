@@ -1,0 +1,167 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: color(display-p3 0.5 0.7 1);  
+}
+
+/* Logo */
+.logo img {
+  width: 120px;
+}
+
+/* Seleccionamos el logo con :is() */
+:is(.footer-content .logo) {
+  position: absolute;
+  left: 20px;    
+}
+
+
+/* Menú de navegación */
+.nav {
+  position: relative;
+}
+
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.menu li a i {
+  display: none;
+}
+
+.menu li a {  
+  color: color(display-p3 0.2 0.2 0.2);
+  text-decoration: none;
+  font-size: 1.2em;  
+}
+
+.carousel {
+  max-width: 800px;
+  margin: auto;
+}
+
+.carousel img {
+  border-radius: 10px;
+}
+
+.catchy-section {
+  text-align: center;
+  padding: 40px;
+  background-color: color(display-p3 0.2 0.6 0.9); /* Azul llamativo */
+}
+
+.catchy-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+}
+
+.catchy-subtitle {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.catchy-subtitle a {
+  color: color(display-p3 1 0.8 0.3);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.catchy-subtitle a:hover {
+  text-decoration: underline;
+}
+
+.footer {
+  background-color: color(display-p3 0.5 0.7 1);    
+  padding: 10px;  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;  
+}
+
+/* Estilos del menú */
+.footer-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.footer-menu ul li a {
+  color: color(display-p3 0.2 0.2 0.2);
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+/* Redes sociales */
+.social-icons {
+  position: absolute;
+  right: 20px;
+}
+
+.social-icons a {
+  color: color(display-p3 0.2 0.2 0.2);
+  font-size: 1em;
+  margin: 0 10px;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .hamburger {
+      display: block;
+  }
+
+  .menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      background-color: color(display-p3 0.5 0.7 1);      
+      padding: 10px;
+      width: 200px;
+  }
+
+  .menu li a:is(.mobile) i {
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  .menu.active {
+      display: flex;
+  }
+
+  .footer-content {
+    flex-direction: column;
+  }
+
+  .footer-menu ul {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+}
