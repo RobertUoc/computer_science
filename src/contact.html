@@ -61,7 +61,8 @@
                 <input type="checkbox" class="form-check-input" id="aceptoPolitica" required>
                 <label class="form-check-label" for="aceptoPolitica">
                     Acepto que este sitio web almacene la información que he enviado para que puedan responder a mi solicitud, de acuerdo con la 
-                    <a href="https://" class="text-success fw-bold" target="_blank"> política de privacidad</a>.
+                    <!-- Botón para abrir el modal -->
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#politicaModal">Política de Privacidad</a>                                        
                 </label>
             </div>
         
@@ -69,7 +70,7 @@
                 <input type="checkbox" class="form-check-input" id="aceptoComercial">
                 <label class="form-check-label" for="aceptoComercial">
                     Acepto recibir comunicaciones comerciales personalizadas por parte de Computer Science Conference 2025 de acuerdo con lo que establece nuestra
-                    <a href="https://" class="text-success fw-bold" target="_blank"> política de privacidad</a>.
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#politicaModal">Política de Privacidad</a>                                                    
                 </label>
             </div>
 
@@ -83,3 +84,24 @@
 
   </body>
 </html>
+
+
+
+<!-- Modal de privacidad -->
+<div class="modal fade" id="politicaModal" tabindex="-1" aria-labelledby="politicaLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title" id="politicaLabel">Política de Privacidad</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          En esta conferencia recogemos datos personales para responder a tus consultas. Nos comprometemos a garantizar la seguridad y privacidad de la información.
+          Para más detalles, visita nuestra <a href="https://" target="_blank">página de privacidad</a>.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
