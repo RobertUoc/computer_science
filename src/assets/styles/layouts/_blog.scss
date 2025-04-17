@@ -9,9 +9,9 @@
     p::first-letter {
        -webkit-initial-letter: 4;
        initial-letter: 4;
-       color: #FE742F;
-       font-weight: bold;
        margin-right: 0.5em;
+       font-weight: bold;
+       color: $color-first;           
     }
   }
 

@@ -3,28 +3,23 @@ body {
   font-family: Arial, sans-serif;
 }
 
-/* Header */
 .header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;  
   padding: 15px 30px;
-  background-color: color(display-p3 0.5 0.7 1);  
+  background-color: $color-header;
 }
 
-/* Logo */
 .logo img {
   width: 120px;
 }
 
-/* Seleccionamos el logo con :is() */
 :is(.footer-content .logo) {
   position: absolute;
   left: 20px;    
 }
 
-
-/* Menú de navegación */
 .nav {
   position: relative;
 }
@@ -32,26 +27,38 @@ body {
 .hamburger {
   display: none;
   font-size: 2rem;
-  background: none;
-  border: none;
-  color: white;
+  color: $color-blanc;
   cursor: pointer;
+  background: none;    
+  border: none;    
 }
 
 .menu {
-  list-style: none;
   display: flex;
   gap: 20px;
+  list-style: none;    
 }
 
 .menu li a i {
   display: none;
 }
 
+.social-icons a {
+  margin: 0 10px;  
+  font-size: 1em;  
+  color: $color-menu;
+}
+
+.catchy-subtitle a {
+  font-weight: bold;
+  color: color(display-p3 1 0.8 0.3);  
+  text-decoration: none;  
+}
+
 .menu li a {  
-  color: color(display-p3 0.2 0.2 0.2);
-  text-decoration: none;
   font-size: 1.2em;  
+  color: $color-menu;
+  text-decoration: none;  
 }
 
 .carousel {
@@ -64,26 +71,26 @@ body {
 }
 
 .catchy-section {
-  text-align: center;
-  padding: 40px;
-  background-color: color(display-p3 0.2 0.6 0.9); /* Azul llamativo */
+  padding: 40px;    
+  text-align: center;  
+  background-color: $color-azul;    
 }
 
 .catchy-title {
   font-size: 3rem;
   font-weight: bold;
-  color: white;
+  color: $color-blanc;
 }
 
 .catchy-subtitle {
   font-size: 1.5rem;
-  color: white;
+  color: $color-blanc;
 }
 
-.catchy-subtitle a {
-  color: color(display-p3 1 0.8 0.3);
-  text-decoration: none;
-  font-weight: bold;
+.footer-menu ul li a {
+  font-size: 1.2em;
+  color: $color-menu;  
+  text-decoration: none;  
 }
 
 .catchy-subtitle a:hover {
@@ -91,11 +98,11 @@ body {
 }
 
 .footer {
-  background-color: color(display-p3 0.5 0.7 1);    
-  padding: 10px;  
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 10px;        
+  background-color: $color-peu;        
 }
 
 .footer-content {
@@ -103,29 +110,15 @@ body {
   justify-content: space-between;  
 }
 
-/* Estilos del menú */
 .footer-menu ul {
-  list-style: none;
   display: flex;
   gap: 20px;
+  list-style: none;    
 }
 
-.footer-menu ul li a {
-  color: color(display-p3 0.2 0.2 0.2);
-  text-decoration: none;
-  font-size: 1.2em;
-}
-
-/* Redes sociales */
 .social-icons {
   position: absolute;
   right: 20px;
-}
-
-.social-icons a {
-  color: color(display-p3 0.2 0.2 0.2);
-  font-size: 1em;
-  margin: 0 10px;
 }
 
 /* Estilos responsivos */
@@ -135,16 +128,15 @@ body {
   }
 
   .menu {
-      display: none;
-      flex-direction: column;
-      position: absolute;
-      top: 60px;
-      right: 0;
-      background-color: color(display-p3 0.5 0.7 1);      
-      padding: 10px;
-      width: 200px;
-      position: absolute;
-      z-index: 9999;
+      position: absolute;  
+      top: 60px;      
+      right: 0;           
+      z-index: 9999;              
+      display: none;            
+      flex-direction: column;                              
+      width: 200px;                    
+      padding: 10px;                 
+      background-color: $color-peu;                  
   }
 
   .menu li a:is(.mobile) i {
@@ -162,8 +154,8 @@ body {
 
   .footer-menu ul {
     flex-direction: column;
-    text-align: center;
     gap: 10px;
+    text-align: center;    
   }
 
 }
