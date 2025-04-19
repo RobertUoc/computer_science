@@ -23,11 +23,9 @@ body {
   border-radius: 2rem;    
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
     0 2px 4px -1px rgba(0, 0, 0, 0.06);
-
     @media (min-width: $mqMinWidth) {
       margin: auto;
     }
-
 }
 
 .uoc-header {
@@ -46,11 +44,9 @@ body {
   background-color: $color-peu;
   border-radius: 2rem; 
   flex-direction: column;
-
   @media (max-width: $mqMaxWidth) {
     flex-direction: column;
   }
-
 }
   
 .header {
@@ -164,11 +160,9 @@ body {
   font-size: 3rem;
   font-weight: bold;
   color: $color-blanc;
-
   @media (max-width: $mqMaxWidth) {
     font-size: 2rem;
   }
-
 }
 
 .catchy-subtitle {
