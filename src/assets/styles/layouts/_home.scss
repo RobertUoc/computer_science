@@ -46,6 +46,11 @@ body {
   background-color: $color-peu;
   border-radius: 2rem; 
   flex-direction: column;
+
+  @media (max-width: $mqMaxWidth) {
+    flex-direction: column;
+  }
+
 }
   
 .header {
@@ -115,6 +120,12 @@ body {
   justify-content: center;
   gap: 20px;
   list-style: none;    
+  @media (max-width: $mqMaxWidth) {    
+      margin-top: 40px;
+      flex-direction: column;
+      text-align: center;      
+      gap: 10;  
+  }
 }
 
 .social-icons {
@@ -191,15 +202,6 @@ body {
 
   .menu.active {
     display: flex;
-  }
-
-  .uoc-footer {
-    flex-direction: column;
-  }
-
-  .footer-menu ul {
-    flex-direction: column;
-    text-align: center;    
   }
 
 }
