@@ -18,12 +18,16 @@ body {
 .uoc-container {
   max-width: 800px;
   padding: 2rem;
-  margin: auto;
   text-align: center;
   background-color: #fff;
   border-radius: 2rem;    
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
     0 2px 4px -1px rgba(0, 0, 0, 0.06);
+
+    @media (min-width: $mqMinWidth) {
+      margin: auto;
+    }
+
 }
 
 .uoc-header {
@@ -72,7 +76,10 @@ body {
   color: $color-blanc;
   cursor: pointer;
   background: none;    
-  border: none;    
+  border: none;     
+  @media (max-width: $mqMaxWidth) {
+    display: block;
+  }
 }
 
 .menu {
@@ -146,6 +153,11 @@ body {
   font-size: 3rem;
   font-weight: bold;
   color: $color-blanc;
+
+  @media (max-width: $mqMaxWidth) {
+    font-size: 2rem;
+  }
+
 }
 
 .catchy-subtitle {
@@ -159,10 +171,7 @@ body {
 
 /* Estilos responsivos */
 @media (max-width: 768px) {
-  .hamburger {
-    display: block;
-  }
-
+      
   .menu {
     position: absolute;  
     top: 60px;      
