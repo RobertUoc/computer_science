@@ -37,13 +37,13 @@ body {
 }
 
 .uoc-footer {
-  font-size: 0.75rem; 
   display: flex;
-  justify-content: column;  
-  padding: 10px;
-  background-color: $color-peu;
-  border-radius: 2rem; 
   flex-direction: column;
+  justify-content: column;  
+  padding: 10px;  
+  font-size: 0.75rem;         
+  background-color: $color-peu;  
+  border-radius: 2rem;   
   @media (max-width: $mqMaxWidth) {
     flex-direction: column;
   }
@@ -62,9 +62,9 @@ body {
 }
 
 :is(.uoc-footer .logo) {
-  padding:5px;
   position: absolute;
   left:50px;
+  padding:5px;    
 }
 
 .nav {
@@ -93,6 +93,18 @@ body {
   display: none;
 }
 
+.social-icons a {
+  margin: 0 25px;  
+  font-size: 1em;  
+  color: $color-menu;
+}
+
+.catchy-subtitle a {
+  font-weight: bold;
+  color: color(display-p3 1 0.8 0.3);  
+  text-decoration: none;  
+}
+
 .menu li a {  
   font-size: 1.2em;  
   color: $color-menu;
@@ -106,39 +118,27 @@ body {
 }
 
 .footer-menu {
-  align-items: center;
-  text-align: center;
   position: center;
+  align-items: center;  
+  text-align: center;  
 }
 
 .footer-menu ul {
-  display: flex;  
-  justify-content: center;
+  display: flex;    
   gap: 20px;
+  justify-content: center;    
   list-style: none;    
   @media (max-width: $mqMaxWidth) {    
-      margin-top: 40px;
       flex-direction: column;
-      text-align: center;      
       gap: 10;  
+      margin-top: 40px;            
+      text-align: center;            
   }
 }
 
 .social-icons {
   position: absolute;
   right: 20px;
-}
-
-.social-icons a {
-  margin: 0 25px;  
-  font-size: 1em;  
-  color: $color-menu;
-}
-
-.catchy-subtitle a {
-  font-weight: bold;
-  color: color(display-p3 1 0.8 0.3);  
-  text-decoration: none;  
 }
 
 .carousel {
